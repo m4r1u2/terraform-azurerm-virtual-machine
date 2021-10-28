@@ -117,7 +117,7 @@ variable "operating_system_disk_write_accelerator" {
 variable "operating_system_disk_size" {
   description = "Operating System_disk size to be provisioned"
   type        = string
-  default     = false
+  default     = null
 }
 
 # Credentials
