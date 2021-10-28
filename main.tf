@@ -61,8 +61,8 @@ resource "azurerm_linux_virtual_machine" "linux" {
   resource_group_name = var.resource_group_name
   tags                = var.tags
 
-  size                            = var.virtual_machine_size
-  disk_size_gb                    = var.operating_system_disk_size
+  size = var.virtual_machine_size
+
   admin_username                  = local.admin_username
   admin_password                  = local.admin_password
   disable_password_authentication = false
@@ -85,6 +85,7 @@ resource "azurerm_linux_virtual_machine" "linux" {
 
   os_disk {
     caching                   = var.operating_system_disk_cache
+    disk_size_gb              = var.operating_system_disk_size
     storage_account_type      = var.operating_system_disk_type
     write_accelerator_enabled = var.operating_system_disk_write_accelerator
   }
