@@ -62,6 +62,7 @@ resource "azurerm_linux_virtual_machine" "linux" {
   tags                = var.tags
 
   size                            = var.virtual_machine_size
+  disk_size_gb                    = var.operating_system_disk_size
   admin_username                  = local.admin_username
   admin_password                  = local.admin_password
   disable_password_authentication = false

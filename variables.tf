@@ -114,6 +114,12 @@ variable "operating_system_disk_write_accelerator" {
   default     = false
 }
 
+variable "operating_system_disk_size" {
+  description = "Operating System_disk size to be provisioned"
+  type        = string
+  default     = false
+}
+
 # Credentials
 variable "admin_username" {
   description = "Default Username - Random if left blank"
